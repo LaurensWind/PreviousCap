@@ -1,0 +1,19 @@
+{
+    "name": "wind/previouscap",
+    "description": "Adds recently viewed products to customer account page in Magento 2",
+    "require": {
+        "php": "~5.5.0|~5.6.0|~7.0.0",
+        "magento/magento-composer-installer": "*"
+    },
+    "suggest": {
+    },
+    "type": "magento2-module",
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Wind\\PreviousCap\\": ""
+        }
+    }
+}
