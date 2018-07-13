@@ -1,0 +1,22 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="customer_account"/>
+    <body>
+        <referenceBlock name="page.main.title">
+            <action method="setPageTitle">
+                <argument translate="true" name="title" xsi:type="string">Recently viewed</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Magento\Catalog\Block\Widget\RecentlyViewed" name="customer.account.recently.viewed"
+                   template="Wind_PreviousCap::customer/account/recently-viewed.phtml">
+                <arguments>
+                    <argument name="uiComponent" xsi:type="string">widget_recently_viewed</argument>
+                    <argument name="page_size" xsi:type="number">10</argument>
+                    <argument name="show_attributes" xsi:type="string">name,image,price,sku,learn_more</argument>
+                    <argument name="template" xsi:type="string">list</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
